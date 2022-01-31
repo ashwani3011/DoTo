@@ -1,48 +1,48 @@
 import { useState } from "react";
+import { useLogin } from "../../hooks/useLogin";
+
+// styles
 
 import "./Login.css";
 
 export default function Login() {
-  let [email, setEmail] = useState("");
-  let [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { login, error, isPending } = useLogin();
 
-  let submitHandler = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    login(email, password);
   };
 
   return (
-    <div className="signup-form">
-      <form
-        onSubmit={(e) => {
-          submitHandler(e);
-        }}
-        className="login-form"
-      >
-        <label>
-          <span>Email</span>
-          <input
-            type="email"
-            required
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            value={email}
-          />
-        </label>
-        <label>
-          <span>Password</span>
-          <input
-            type="password"
-            required
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-            value={password}
-          />
-        </label>
-        <button className="btn">Submit</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className="login-form">
+      <h2>login</h2>
+      <label>
+        <span>email:</span>
+        <input
+          required
+          type="email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+        />
+      </label>
+      <label>
+        <span>password:</span>
+        <input
+          required
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+        />
+      </label>
+      {!isPending && <button className="btn">Log in</button>}
+      {isPending && (
+        <button className="btn" disabled>
+          loading
+        </button>
+      )}
+      {error && <div className="error">{error}</div>}
+    </form>
   );
 }
