@@ -24,3 +24,7 @@
   width: 98%;
   height: 25px;
 }
+
+.signup-form label {
+  margin-bottom: 5px;
+}
