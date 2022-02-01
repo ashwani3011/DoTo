@@ -6,6 +6,7 @@
   box-sizing: border-box;
   position: relative;
   color: #fff;
+  position: sticky;
 }
 .sidebar-content {
   position: fixed;
