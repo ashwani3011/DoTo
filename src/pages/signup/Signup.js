@@ -62,7 +62,7 @@ export default function Signup() {
         />
       </label>
       <label>
-        <span>Display name:</span>
+        <span>Name:</span>
         <input
           required
           type="text"

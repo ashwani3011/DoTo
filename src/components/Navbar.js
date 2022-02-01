@@ -17,12 +17,12 @@ export default function Navbar() {
           <span>DoTo</span>
         </li>
         <>
-          <li>
+          {/* <li>
             <Link to="/">Dashboard</Link>
           </li>
           <li>
             <Link to="/create">Create</Link>
-          </li>
+          </li> */}
           {!user && (
             <>
               <li>

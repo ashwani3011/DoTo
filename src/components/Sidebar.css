@@ -1,7 +1,7 @@
 .sidebar {
   width: 300px;
   min-width: 300px;
-  background: var(--primary-color);
+  background: rgb(199, 86, 45);
   min-height: 100vh;
   box-sizing: border-box;
   position: relative;
@@ -24,6 +24,7 @@
 }
 .sidebar .links li {
   margin-top: 10px;
+  list-style: none;
 }
 .sidebar .links a {
   display: flex;
@@ -39,7 +40,7 @@
 }
 .sidebar .links a.active {
   color: #555;
-  background: var(--bg-color);
+  background: white;
   border-radius: 20px 0 0 20px;
 }
 .sidebar .links .active img {
