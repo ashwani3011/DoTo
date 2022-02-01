@@ -5,3 +5,7 @@
   flex-grow: 1;
   padding: 0 60px;
 }
+
+li {
+  list-style: none;
+}
