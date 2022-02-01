@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import "./Dashboard.css";
 const filterList = [
   "all",
   "mine",
@@ -10,13 +9,13 @@ const filterList = [
   "sales",
 ];
 
-export default function ProjectFilter() {
+export default function ProjectFilter({ changeFilter }) {
   const [currentFilter, setCurrentFilter] = useState("all");
 
   const handleClick = (newFilter) => {
     setCurrentFilter(newFilter);
+    changeFilter(newFilter);
   };
-  console.log(currentFilter);
 
   return (
     <div className="project-filter">
