@@ -19,12 +19,33 @@
 }
 
 .create-form button {
-  padding: 8px 0;
-
+  padding: 8px 10;
   margin-top: 10px;
 }
 
 .create-form input {
   width: 98%;
   height: 25px;
+}
+
+.create-form label {
+  display: block;
+  margin: 24px auto;
+}
+.create-form label span {
+  display: block;
+  margin-bottom: 6px;
+}
+.create-form input,
+.create-form textarea {
+  padding: 8px 6px;
+  font-size: 1em;
+  color: #777;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.create-form textarea {
+  min-height: 160px;
 }

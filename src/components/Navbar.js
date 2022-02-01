@@ -14,7 +14,7 @@ export default function Navbar() {
       <ul>
         <li className="logo">
           <img src={Temple} alt="dojo logo" />
-          <span>DoTo</span>
+          <span style={{ size: "20px" }}>DoTo</span>
         </li>
         <>
           {/* <li>

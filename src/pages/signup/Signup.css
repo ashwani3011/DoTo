@@ -10,6 +10,7 @@
 }
 
 .signup-form span {
+  margin-top: 5px;
   display: block;
   font-size: large;
   font-weight: 500;
@@ -22,7 +23,7 @@
 
 .signup-form input {
   width: 98%;
-  height: 25px;
+  height: 35px;
 }
 
 .signup-form label {

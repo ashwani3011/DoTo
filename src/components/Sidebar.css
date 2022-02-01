@@ -1,12 +1,13 @@
 .sidebar {
   width: 300px;
   min-width: 300px;
-  background: rgb(199, 86, 45);
-  min-height: 100vh;
+  background: var(--primary-color);
+  min-height: 1000vh;
   box-sizing: border-box;
   position: relative;
   color: #fff;
   position: sticky;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .sidebar-content {
   position: fixed;
@@ -37,11 +38,13 @@
 }
 .sidebar .links img {
   margin-right: 10px;
+  width: 27px;
+  height: 27px;
   filter: invert(100%);
 }
 .sidebar .links a.active {
   color: #555;
-  background: white;
+  background: var(--bg-color);
   border-radius: 20px 0 0 20px;
 }
 .sidebar .links .active img {
